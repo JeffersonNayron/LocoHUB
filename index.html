@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Refeição Maquinista</title>
+</head>
+<body>
+   
+        <header>
+            <div class="image_logo">
+                <img src="Vale-logo-E7CEF7F5FD-seeklogo.com.png" alt="logo vale">
+            </div>
+            <h1>Locomotive Hub</h1>
+           <!--Inicio Mneu Mobile--> 
+          
+
+           <div class="dropdown">
+            <button class="dropbtn" data-dropMenu >Local
+                
+                <ul id="list_mobile" class="menu dropdown_list">
+                    <li data-local="local-x5" onclick="showSpace('space-x5')">X5</li>
+                    <li data-local="local-x6" onclick="showSpace('space-x6')">X6</li>
+                    <li data-local="local-ctr" onclick="showSpace('space-ctr')">CTR</li>
+                    <li data-local="local-pial" onclick="showSpace('space-pial')">Pial-Ofi</li>
+                    <li data-local="local-virador" onclick="showSpace('space-virador')">Virador</li>
+                    <li data-local="local-composicao" onclick="showSpace('space-composicao')">Composição</li>
+                </ul>
+                </button>
+           </div>
+           
+
+        </header>
+        <div class="container">
+            <div class="name-list">
+                <div class="adicionar">
+                    <div class="add-maquinista">
+
+                        <button id="addButton">Enter</button>
+                        <input type="text" id="newMaquinista" placeholder="+ maquinista" />
+                    </div>
+                </div>
+                <h2>Maquinistas</h2>
+                <ul id="nameList">
+                    <li draggable="true"> Humberto </li>
+                    <li draggable="true">Aldo</li>
+                    <li draggable="true">Arthur D.</li>
+                    <li draggable="true">Joel</li>
+                    <li draggable="true">Rosana</li>
+                    <li draggable="true">Naimara</li>
+                    <li draggable="true">Marco R.</li>
+                    <li draggable="true">Joanderson</li>
+                    <li draggable="true">Isaias</li>
+                    <li draggable="true">Rafael</li>
+                    <li draggable="true">Pereira</li>
+                    <li draggable="true">Nayron</li>
+                    <li draggable="true">Otoniel</li>
+                    <li draggable="true">Naylan</li>
+                    <li draggable="true">Walterilson</li>
+                    <li draggable="true">Adelan</li>
+                    <li draggable="true">Daniel</li>
+                    <li draggable="true">Rogério</li>
+                    <li draggable="true">Werbeth</li>
+                    <li draggable="true">Filgueiras</li>
+                    <li draggable="true">Geraldo</li>
+                    <li draggable="true">Jéssica H.</li>
+                    <li draggable="true">Cid</li>
+                    <li draggable="true">Cutrim</li>
+                    <li draggable="true">Mário</li>
+                                        
+                </ul>
+            </div>
+            <div class="spaces">
+                <div class="spacesContainer" id="space-x5" style="display: block;">
+                    <h2 class="space-title">Espaço X5</h2> 
+                    <div class="space" ondrop="drop(event)" ondragover="allowDrop(event)">
+                        <div class="dropped-names"></div>                      
+                    </div>
+                </div>               
+
+                <div class="spacesContainer" id="space-x6" style="display: none;">
+                    <h2 class="space-title">Espaço X6</h2>
+                    <div class="space" ondrop="drop(event)" ondragover="allowDrop(event)">
+                        <div class="dropped-names"></div>
+                    </div>
+                </div>
+                <div class="spacesContainer" id="space-ctr" style="display: none;">
+                    <h2 class="space-title">CTR</h2>
+                    <div class="space" ondrop="drop(event)" ondragover="allowDrop(event)">
+                        <div class="dropped-names"></div>
+                    </div>
+                </div>
+                <div class="spacesContainer" id="space-pial" style="display: none;">
+                    <h2 class="space-title">Pial/ Oficina</h2>
+                    <div class="space" ondrop="drop(event)" ondragover="allowDrop(event)">
+                        <div class="dropped-names"></div>
+                    </div>
+                </div>
+                <div class="spacesContainer" id="space-virador" style="display: none;">
+                    <h2 class="space-title">Virador de Vagões</h2>
+                    <div class="space" ondrop="drop(event)" ondragover="allowDrop(event)">
+                        <div class="dropped-names"></div>
+                    </div>
+                </div>
+                <div class="spacesContainer" id="space-composicao" style="display: none;">
+                    <h2 class="space-title">Composição</h2>
+                    <div class="space" ondrop="drop(event)" ondragover="allowDrop(event)">
+                        <div class="dropped-names"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="chat">
+                <div class="chat-title">
+                    <h3>Chat Operacional</h3>
+                </div>
+            
+                <!-- Tela de Login -->
+                <div id="login-screen">
+                    <h2>Escolha seu nome ou insira seu nome:</h2>
+            
+                    <!-- Seção para Administradores -->
+                    <select id="login-name">
+                        <option value="" disabled selected>Selecione um administrador</option>
+                        <option value="Recepção">Recepção</option>
+                        <option value="Formação">Formação</option>
+                        <option value="Classificação">Classificação</option>
+                    </select>
+                    <input type="password" id="login-password" placeholder="Digite a senha (se for admin)" />
+            
+                    <!-- Seção para Usuários Comuns -->
+                    <div id="common-user-section">
+                        <input type="text" id="user-name" placeholder="Digite seu nome" />
+                    </div>
+            
+                    <button id="login-button">Entrar</button>
+                </div>
+            
+                <!-- Tela do Chat -->
+                <div id="chat-container" style="display:none;">
+                    <div id="chat-box">
+                        <!-- As mensagens vão aparecer aqui -->
+                    </div>
+                    <div id="chat-input">
+                        <input type="text" id="message-input" placeholder="Digite sua mensagem..." />
+                        <button id="send-button">Enviar</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Som de envio de mensagem (para administradores) -->
+            <audio id="admin-sound" src="https://www.soundjay.com/button/beep-07.wav" preload="auto"></audio>
+            
+            
+            <!-- Som de envio de mensagem (para administradores) -->
+            <audio id="admin-sound" src="https://www.soundjay.com/button/beep-07.wav" preload="auto"></audio>
+            
+            
+            <!-- Som de envio de mensagem (para administradores) -->
+            <audio id="admin-sound" src="https://www.soundjay.com/button/beep-07.wav" preload="auto"></audio>
+            
+            
+        
+                       
+
+        </div>
+        <footer>
+            <p>&copy; 2024 Locomotive Hub. Todos os direitos reservados.</p>
+        </footer>
+    
+    <script src="/socket.io/socket.io.js"></script> 
+    <script src="script.js"></script>
+    <script>
+        function showSpace(spaceId) {
+            // Ocultar todos os espaços
+            const spaces = document.querySelectorAll('.spacesContainer');
+            spaces.forEach(space => {
+                space.style.display = 'none';
+            });
+
+            // Mostrar o espaço selecionado
+            const selectedSpace = document.getElementById(spaceId);
+            if (selectedSpace) {
+                selectedSpace.style.display = 'block';
+            }
+        }
+
+
+
+    </script>
+</body>
+</html>
